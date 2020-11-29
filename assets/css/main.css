@@ -18,35 +18,35 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /*
@@ -64,13 +64,32 @@ table {
 }
 
 header {
-	float: left;
-	width: 30%;
+  float: left;
+  width: 30%;
 }
 
 .sec {
-	float: right;
-	width: 70%;
+  float: right;
+  width: 70%;
+  font-size: 16px;
+  padding-top: 20px;
+}
+
+.sidebar img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  border-radius: 50%;
+  height: 300px;
+}
+
+#name {
+  font-size: 30px;
+}
+
+#title{
+  font-size: 24px
 }
 
 /*
@@ -79,37 +98,51 @@ header {
   ========================================
 */
 
-h1 {
-	color: black;
-	font-size: 24px;
-}
-
-h1, p {
-	/*display: inline-block;*/
-	margin-bottom: 12px
-}
-
-.sec {
-	font-size: 14px;
-	/*display: inline-block;
-	padding-left: 30%;
-	padding-right: 10%;*/
-	padding-top: 20px;
+.sidebar h1, p {
+  text-align: center;
+  color: black;
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 12px;
 }
 
 .sec h1 {
-	padding-bottom: 6px;
-	border-bottom: 4px dotted rgb(211,211,211);
-	margin-bottom: 12px;
-	margin-right: 30px
+  text-align: left;
+  color: #BF496B;
+  padding-bottom: 6px;
+  border-bottom: 4px dotted rgb(211,211,211);
+  margin-bottom: 12px;
+  margin-right: 30px;
+  font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/*.sec p {
-	padding-right: 10%;
-}*/
+.sec p {
+  text-align: left;
+  color: #A2A2A2;
+  margin: 0 1.5%;
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
-.about_me {
-	color: green;
+ul {
+  list-style: circle;
+}
+
+li {
+  padding:6px;
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+  ========================================
+  About me
+  ========================================
+*/
+
+.about_me p {
+  padding-bottom: 20px;
+}
+
+.about_me article {
+  padding:5% 2%;
 }
 
 /*
@@ -118,74 +151,137 @@ h1, p {
   ========================================
 */
 
-.work {
-	color: red;
-	/*background: grey;*/
-}
-
-/*.work_place:before,
-.work_place:after {
+.work .frame:before,
+.work .frame:after {
   content: "";
   display: table;
 }
-.work_place:after {
+.work .frame:after {
   clear: both;
 }
-.work_place {
+.work .frame {
   clear: both;
   *zoom: 1;
-}*/
+  height: 300px;
+  padding-bottom: 50px;
+}
 
-.work_des {
+.work .description {
+  float: left;
+  width: 62%;
+  padding-top: 30px;
+  padding-left: 15px;
+  border-top: solid #A2A2A2 1px;
+}
+
+#QMUL .description {
+  border-top: none;
+}
+
+.work .logo {
+  float: right;
+  width: 27%;
+  height: 100%;
+  position: relative;
+}
+
+.work img {
+  max-width: 45%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#QMUL img {
+  max-width: 65%;
+}
+
+/*
+  ========================================
+  Projects
+  ========================================
+*/
+
+.proj_place:before,
+.proj_place:after {
+  content: "";
+  display: table;
+}
+.proj_place:after {
+  clear: both;
+}
+.proj_place {
+  clear: both;
+  *zoom: 1;
+}
+
+.proj_des {
+  float: right;
+  width: 60%;
+}
+
+.projects .des {
+  padding: 30px;
+}
+
+.projects .skill {
+  padding: 0 30px;
+}
+
+.proj_figure {
   float: left;
   margin: 0 1.5%;
-  width: 70%;
-  margin-bottom: 12px;
-}
-.work_logo {
-  float: right;
-  margin: 0 1.5%;
-  width: 23%;
+  width: 30%;
 }
 
-
-
-.projects {
-	color:blue;
+.proj_figure img {
+  display: block;
+  /*max-width: 100%*/
+  width:300px;
+  padding: 30px;
+  vertical-align:middle;
 }
 
-.publications {
-	/*background: grey;*/
+/*
+  ========================================
+  Publications
+  ========================================
+*/
+
+.publications a {
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.publications ul {
+  padding: 5% 2%;
+  color: #A2A2A2;
+}
+
+.publications li a {
+  color: #49bf9d;
 }
 
 .int_links {
-	color: pink;
-	font-size: 20px;
+  color: #49bf9d;
+  /*font-size: 20px;*/
 }
 
 .ext_links {
-	color: brown;
-	font-size: 14px;
+  color: #49bf9d;
+  /*font-size: 14px;*/
 }
 
 /* makes the paragraphs line up with the links in the projects section 
 .projects p {
-	display: inline;
+  display: inline;
 }
 */
-#name {
-	font-size: 30px;
-}
 
-#title{
-	font-size: 24px
-}
-
-#avatar {
-	display: none;
-	margin: 0 0 1em 0;
-	width: 6.25em;
-}
 
 /*
   ========================================
@@ -194,16 +290,17 @@ h1, p {
 */
 
 .btn {
-	margin: 4px;
-	padding: 4px;
-	border: 1px solid green;
+  margin: 4px;
+  padding: 4px;
+  border: 1px solid #49bf9d;
   border-radius: 5px;
   display: inline-block;
 }
 
 #resume {
-	margin: 4px;
-	padding: 4px;
-	border: 1px solid green;
+  margin: 4px;
+  padding: 4px;
+  border: 1px solid #49bf9d;
   border-radius: 5px;
+  color: #49bf9d;
 }
